@@ -1,11 +1,19 @@
-<script setup></script>
-
+<script setup>
+import Sidebar from "@/components/Sidebar.vue";
+</script>
 <template>
-  <h1>Welcome to WorldWise!</h1>
-  <p>
-    Explore the world and learn about different countries with our interactive
-    map. Click on a country to discover interesting facts and information.
-  </p>
+  <div class="app">
+    <Sidebar />
+    <!-- <Map />
+    <User /> -->
+  </div>
 </template>
-
-<style scoped></style>
+<style scoped>
+.app {
+  height: 100vh;
+  padding: 2.4rem;
+  overscroll-behavior-y: none;
+  display: flex;
+  position: relative;
+}
+</style>
