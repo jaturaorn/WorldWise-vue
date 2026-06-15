@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <RouterLink to="/">
-    <img src="/logo.png" alt="WorldWise logo" class="logo" />
+    <img src="../assets/logo.png" alt="WorldWise logo" class="logo" />
   </RouterLink>
 </template>
 <style scoped>

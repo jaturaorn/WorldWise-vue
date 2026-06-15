@@ -5,6 +5,7 @@ import LoginView from "../views/Login.vue";
 import PageNotFoundView from "../views/PageNotFound.vue";
 import PricingView from "../views/Pricing.vue";
 import ProductView from "../views/Product.vue";
+import AppLayoutView from "../views/AppLayout.vue";
 
 const routes = [
   { path: "/", Component: HomepageView },
@@ -12,6 +13,7 @@ const routes = [
   { path: "/pagenotfound", component: PageNotFoundView },
   { path: "/pricing", component: PricingView },
   { path: "/product", component: ProductView },
+  { path: "/applayout", component: AppLayoutView },
 ];
 
 export const router = createRouter({

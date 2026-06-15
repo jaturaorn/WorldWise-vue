@@ -1,17 +1,40 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+import { useAuthStore } from "@/stores/useAuthStore";
+
+import { useRouter } from "vue-router";
+import PageNav from "@/components/PageNav.vue";
+
+const email = ref("");
+const password = ref("");
+
+const authStore = useAuthStore();
+const router = useRouter();
+
+function handleLogin() {
+  // 1. สั่งสั่งล็อกอินผ่าน Store (อย่าลืมใส่ .value ถ้าเรียกใช้ในสคริปต์)
+  authStore.login(email.value, password.value);
+
+  // 2. เช็คเงื่อนไขถ้าล็อกอินสำเร็จ ให้สั่ง router เปลี่ยนหน้าทันที
+  if (authStore.isAuthenticated) {
+    router.push("/applayout"); // หรือ path ที่คุณตั้งไว้
+  }
+}
+</script>
 
 <template>
   <main class="login">
     <PageNav />
     <form class="form" @submit.prevent="handleLogin">
       <div class="row">
-        <label htmlFor="email">Email address</label>
-        <input type="email" id="email" />
+        <label for="email">Email address</label>
+        <input type="email" id="email" v-model="email" />
       </div>
 
       <div class="row">
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" />
+        <label for="password">Password</label>
+        <input type="password" id="password" v-model="password" />
       </div>
 
       <div>
