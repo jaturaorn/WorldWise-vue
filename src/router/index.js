@@ -25,7 +25,7 @@ const routes = [
       { path: "countries", component: CountryList },
       { path: "cities/:id", component: City },
       { path: "form", component: Form },
-      { path: "", redirect: "applayout/cities" },
+      { path: "", redirect: "/applayout/cities" },
     ],
   },
 ];

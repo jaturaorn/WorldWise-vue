@@ -4,8 +4,8 @@ import Sidebar from "@/components/Sidebar.vue";
 <template>
   <div class="app">
     <Sidebar />
-    <!-- <Map />
-    <User /> -->
+    <Map />
+    <User />
   </div>
 </template>
 <style scoped>
