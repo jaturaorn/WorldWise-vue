@@ -1,7 +1,16 @@
 <script setup>
 import AppNav from "./AppNav.vue";
 import Logo from "./Logo.vue";
+import { onMounted } from "vue";
+import { useCitiesStore } from "@/stores/citiesStore";
+
+const citiesStore = useCitiesStore();
+
+onMounted(() => {
+  citiesStore.fetchCities();
+});
 </script>
+
 <template>
   <div class="sidebar">
     <Logo />
@@ -12,6 +21,7 @@ import Logo from "./Logo.vue";
     <Footer />
   </div>
 </template>
+
 <style scoped>
 .sidebar {
   flex-basis: 56rem;
