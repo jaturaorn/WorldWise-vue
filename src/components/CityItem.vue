@@ -37,8 +37,6 @@ const flagemojiToPNG = (flag) => {
       }"
       @click="citiesStore.setCurrentCity(city)"
     >
-      <span class="emoji">{{ flagemojiToPNG(city.emoji) }}</span>
-
       <span class="emoji">
         <img
           :src="`https://flagcdn.com/24x18/${flagemojiToPNG(city.emoji)}.png`"
