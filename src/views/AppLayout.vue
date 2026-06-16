@@ -1,4 +1,5 @@
 <script setup>
+import Map from "@/components/Map.vue";
 import Sidebar from "@/components/Sidebar.vue";
 </script>
 <template>
