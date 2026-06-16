@@ -44,10 +44,12 @@ const flagemojiToPNG = (flag) => {
         />
       </span>
       <h3 class="name">{{ city.cityName }}</h3>
+
       <time class="date">({{ formatDate(city.date) }})</time>
+
       <button
         class="deleteBtn"
-        @click.stop.prevent="citiesStore.deleteCity(city)"
+        @click.stop.prevent="citiesStore.deleteCity(city.id)"
       >
         &times;
       </button>
