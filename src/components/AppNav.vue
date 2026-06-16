@@ -38,7 +38,7 @@
 }
 
 /* CSS Modules feature */
-.nav a:global(.active) {
+.nav a.router-link-active {
   background-color: var(--color-dark--0);
 }
 </style>

@@ -16,9 +16,13 @@ onMounted(() => {
     <Logo />
     <AppNav />
     <!-- *Nested Route display by this outlet component  -->
-    <Outlet />
+    <RouterView />
 
-    <Footer />
+    <footer class="footer">
+      <p class="copyright">
+        &copy; Copyright {{ new Date().getFullYear() }} by WorldWise Inc.
+      </p>
+    </footer>
   </div>
 </template>
 

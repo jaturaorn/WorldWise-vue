@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="spinnerContainer">
-    <div class="styles.spinner"></div>
+    <div class="spinner"></div>
   </div>
 </template>
 <style scoped>

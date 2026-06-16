@@ -1,6 +1,10 @@
-<script setup></script>
+<script setup>
+defineProps({
+  message: String,
+});
+</script>
 <template>
-  <p className="{styles.message}"><span role="img">👋</span> {message}</p>
+  <p class="message"><span role="img">👋</span> {{ message }}</p>
 </template>
 <style scoped>
 .message {

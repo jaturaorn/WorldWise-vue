@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar.vue";
   <div class="app">
     <Sidebar />
     <Map />
-    <User />
+    <!-- <User /> -->
   </div>
 </template>
 <style scoped>
