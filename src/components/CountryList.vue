@@ -9,14 +9,14 @@ const citiesStore = useCitiesStore();
 <template>
   <Spinner v-if="citiesStore.isLoading" />
   <Message
-    v-else-if="!citiesStore.cities.length"
-    message="Add your first cities by clicking in a city on the map"
+    v-else-if="!citiesStore.countries.length"
+    message="Add your first countries by clicking in a country on the map"
   />
   <ul v-else class="countryList">
     <CountryItem
-      v-for="country in citiesStore.cities"
+      v-for="country in citiesStore.countries"
       :key="country"
-      :city="country"
+      :country="country"
     />
   </ul>
 </template>
